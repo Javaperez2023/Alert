@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo con Noty</title>
+  <!-- Incluir Noty CSS y JS desde CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+</head>
+<body>
+  <h1>Bienvenido a la página</h1>
+  <p>Esta página mostrará una alerta usando Noty 10 segundos después de cargarse.</p>
+
+  <script>
+    setTimeout(function() {
+      new Noty({
+        text: 'Esto es una alerta usando Noty.',
+        type: 'alert',      // Puedes cambiar a "success", "error", "warning", etc.
+        layout: 'topRight', // Ubicación de la alerta
+        timeout: 5000       // Se cierra automáticamente después de 5 segundos
+      }).show();
+    }, 10000); // 10,000 ms = 10 segundos
+  </script>
+</body>
+</html>
